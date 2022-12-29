@@ -114,7 +114,7 @@ const createBorderCountriesContainer = (country) => {
   borderCountriesContainerElement.appendChild(labelElement);
   country.borders.forEach((border) => {
     borderCountriesContainerElement.appendChild(
-      createDetailButton(border, `index.html/?country=${border}`)
+      createDetailButton(border, `index.html?country=${border}`)
     );
   });
   return borderCountriesContainerElement;

@@ -6,6 +6,7 @@ export const renderDetail = () => {
   if (!countryCode) {
     goBackToDashboard();
   }
+
   const API_DETAIL_URL = `https://restcountries.com/v3.1/alpha/${countryCode}`;
   fetch(API_DETAIL_URL)
     .then((res) => res.json())

@@ -35,5 +35,5 @@ export const renderDetail = () => {
     });
 };
 const goBackToDashboard = () => {
-  window.location.href = "/";
+  window.location.href = "index.html";
 };

@@ -1,0 +1,139 @@
+:root {
+  --color-text: hsl(200, 15%, 8%);
+  --color-input: hsl(0, 0%, 52%);
+  --color-background: hsl(0, 0%, 98%);
+  /* --color-white: hsl(0, 0%, 100%); */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
+
+  background-color: var(--color-background);
+}
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+header {
+  background-color: white;
+  margin-bottom: 32px;
+}
+header button {
+  cursor: pointer;
+  font-size: 24px;
+  border: none;
+  background: none;
+}
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 60px;
+  list-style: none;
+  margin: 0 30px;
+}
+li {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 10px 10px -8px rgb(66, 68, 90);
+  opacity: 0.8;
+}
+li:hover {
+  opacity: 1;
+}
+li img {
+  aspect-ratio: 160/98;
+  width: 100%;
+}
+li a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+.info-container {
+  padding: 30px 20px;
+}
+.country-name {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+.header-content {
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 32px;
+}
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  padding: 0 32px;
+}
+#query {
+  background-color: var(--color-background);
+  box-shadow: 0 10px 10px -8px rgb(66, 68, 90);
+  padding: 15px 30px;
+  border: none;
+}
+.hidden {
+  display: none;
+}
+.detail-back {
+  color: var(--color-text);
+  text-decoration: none;
+  background: transparent;
+  padding: 5px 30px;
+  border-radius: 5px;
+  margin: 0 10px;
+  display: inline-block;
+  border: solid 1px var(--color-text);
+}
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.detail-name {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.border-countries-container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+@media only screen and (max-width: 1000px) {
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .detail-container,
+  .detail-content {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+}
